@@ -1,0 +1,198 @@
+*, *::before, *::after
+    box-sizing: border-box
+
+body, h1, h2, h3, h4, h5, h6, p
+    margin: 0
+
+header
+    background: #e8ecf4a1
+    position: relative
+    width: 100%
+    margin: 0
+    display: flex
+    @media (min-width: 900px)
+        border-bottom: 10px solid $dark-blue
+        justify-content: center
+    // Mobile Menu Button
+    .header-container
+        width: 100%
+        display: flex
+        justify-items: right
+        margin: 0 5%
+        @media (min-width: 900px)
+            justify-content: center
+            padding: .5em 0
+        .mobile-menu-button
+            width: 35px
+            height: 40px
+            display: flex
+            flex-direction: column
+            align-self: center
+            justify-content: center
+            position: relative
+            right: 0
+            border: none
+            background: transparent
+            @media (min-width: 900px)
+                display: none
+            .bar
+                display: block
+                margin: 2px auto
+                height: 3px
+                width: 25px
+                background-color: $dark-blue
+                border-radius: 50px
+        .close-icon
+            display: none
+            color: red
+            right: 0
+            border: none
+            background: transparent
+            @include helvetica-light
+            font-size: 1.5rem
+            align-items: center
+            @media (min-width: 900px)
+                display: none
+    // Header Images titles
+    .header-container--inner
+        width: 100%
+        display: flex
+        flex-direction: row
+        justify-content: center
+        @media (min-width: 900px)
+            width: auto
+        .header__img-container--mobile
+            display: flex
+            flex-direction: row
+            width: 100%
+            justify-content: center
+            align-items: center
+            @media (min-width: 900px)
+                display: none
+            .header__img--mobile
+                width: auto
+                height: auto
+                display: block
+                max-height: 45px
+            .header__img2--mobile
+                display: block
+                width: auto
+                height: auto
+                max-height: 25px
+                margin: .5em 0em
+        .header__img-container--desktop
+            display: flex
+            .header__img--desktop
+                display: none
+                width: auto
+                height: auto
+                max-height: 75px
+                //margin: .5em 1.5em
+                @media (min-width: 900px)
+                    display: block
+            .header__title--desktop
+                display: none
+                flex-direction: column
+                height: 45px
+                justify-content: end
+                align-self: end
+                border-right: solid 1px lightgray
+                padding-right: 1em
+                @media (min-width: 900px)
+                    display: flex
+                .header__title-research
+                    margin-bottom: 1em
+                    text-align: center
+                    @include helvetica-semi-bold
+                    font-size: .79rem
+                    letter-spacing: .5px
+                    color: $light-blue
+                .header__title-platform
+                    margin: 0
+                    text-align: center
+                    @include helvetica-bold
+                    font-size: 2rem
+                    line-height: 20px
+                    letter-spacing: 1.5px
+                    color: $dark-blue
+    //Header Navigation
+    .main-nav-container
+        display: flex
+        flex-direction: column
+        justify-content: center 
+        margin: 2.8em 0 0 1.4em
+        position: absolute
+        background: #fff
+        width: 100%
+        transform: translateY(-120%)
+        padding: 1em 0 2em 0
+        transition: 0.4s ease-in-out
+        z-index: 1000
+        @media (min-width: 900px)
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            justify-content: flex-end
+            position: relative
+            padding: 0
+            margin: 0
+            background: transparent 
+            transition: none
+            transform: translateY(0)
+        .main-nav
+            display: flex
+            flex-direction: column
+            .main-nav__title
+                @include helvetica-light
+                font-size: .8rem
+                text-align: center
+                color: $dark-blue
+                @media (min-width: 900px)
+                    display: none
+            hr
+                border: none
+                border-bottom: 1px solid lightgray
+                width: 80%
+                height: .5px
+                @media (min-width: 900px)
+                    display: none
+            .main-nav__list
+                @include helvetica-light
+                font-size: .8rem
+                list-style: none
+                margin: 0
+                padding: 0
+                display: flex
+                flex-direction: column
+                align-self: center
+                width: 80%
+                @media (min-width: 900px)
+                    flex-direction: row
+                    width: 100%
+                .main-nav__item
+                    background: lightgray
+                    width: 100%
+                    margin-top: .5em
+                    padding: 1em
+                    text-align: center
+                    @media (min-width: 900px)
+                        background: transparent 
+                        margin: 0 2em
+                        padding: 0
+                    .main-nav__link
+                        color: darkgray
+                        text-decoration: none
+                        white-space: nowrap
+                        margin: 0
+                        @media (min-width: 900px)
+                            color: #000
+
+.overlay
+    opacity: 0
+    background: #000
+    width: 100%
+    height: 100%
+    z-index: 10
+    top: 45px
+    left: 0
+    position: absolute
